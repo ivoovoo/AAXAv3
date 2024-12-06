@@ -115,7 +115,7 @@ body{
 
 .app__uptitle::after{
 	position: absolute;
-	content: url('/img/element__after2.png');
+	content: url('../img/element__after2.png');
 	top: -30px;
 	left: -100px;
 }
@@ -172,7 +172,7 @@ body{
 
 .app__main-text::after{
 	position: absolute;
-	content: url('/img/element__after.png');
+	content: url('../img/element__after.png');
 	top: 190px;
 	left: 600px;
 }
@@ -212,7 +212,7 @@ body{
 
 .app__btn a::after{
 	position: absolute;
-	content: url('./img/btn__after.svg');
+	content: url('../img/btn__after.svg');
 	left: 145px;
 	top: 2px;
 }
