@@ -29,3 +29,7 @@ if (animItems.length > 0) {
 	}
 	animOnScroll()
 }
+
+document.querySelector('.menu__img').addEventListener('click',function(){
+	document.querySelector('.menu').classList.toggle('open');
+})
