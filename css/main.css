@@ -212,7 +212,7 @@ body{
 
 .app__btn a::after{
 	position: absolute;
-	content: url('/img/btn__after.svg');
+	content: url('./img/btn__after.svg');
 	left: 145px;
 	top: 2px;
 }
