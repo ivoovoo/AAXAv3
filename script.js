@@ -37,13 +37,40 @@ document.addEventListener("DOMContentLoaded", function() {
 	}  
 });  
 
-document.addEventListener("DOMContentLoaded", function() {  
-	const menuItems = document.querySelectorAll('.menu__nav a');  
-	const sections = document.querySelectorAll('section');  
+// document.addEventListener("DOMContentLoaded", function() {  
+// 	const menuItems = document.querySelectorAll('.menu__nav a');  
+// 	const sections = document.querySelectorAll('section');  
+
+// 	// Функция для обновления активного пункта меню  
+// 	function updateActiveMenu() {  
+// 		 let scrollPos = window.scrollY + window.innerHeight / 2; // Позиция прокрутки  
+
+// 		 sections.forEach((section, index) => {  
+// 			  const sectionTop = section.offsetTop;  
+// 			  const sectionHeight = section.offsetHeight;  
+
+// 			  // Проверка, если секция находится в пределах видимости  
+// 			  if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {  
+// 					menuItems.forEach(item => item.classList.remove('active__menu')); // Сброс активного класса  
+// 					menuItems[index].classList.add('active__menu'); // Добавляем активный класс к текущему элементу  
+// 			  }  
+// 		 });  
+// 	}  
+
+// 	// Слушатель прокрутки  
+// 	window.addEventListener('scroll', updateActiveMenu);  
+
+// 	// Инициализация при загрузке страницы  
+// 	updateActiveMenu();  
+// }); 
+
+document.addEventListener("DOMContentLoaded", function () {  
+	const menuItems = document.querySelectorAll('.menu_nav a'); // Проверьте этот селектор  
+	const sections = document.querySelectorAll('section'); // Селектор для секций  
 
 	// Функция для обновления активного пункта меню  
 	function updateActiveMenu() {  
-		 let scrollPos = window.scrollY + window.innerHeight / 2; // Позиция прокрутки  
+		 let scrollPos = window.scrollY + window.innerHeight / 2; // Корректная позиция прокрутки  
 
 		 sections.forEach((section, index) => {  
 			  const sectionTop = section.offsetTop;  
@@ -51,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			  // Проверка, если секция находится в пределах видимости  
 			  if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {  
-					menuItems.forEach(item => item.classList.remove('active__menu')); // Сброс активного класса  
-					menuItems[index].classList.add('active__menu'); // Добавляем активный класс к текущему элементу  
+					menuItems.forEach(item => item.classList.remove('active_menu')); // Сброс активного класса  
+					menuItems[index].classList.add('active_menu'); // Добавляем активный класс к текущему элементу  
 			  }  
 		 });  
 	}  
@@ -62,4 +89,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Инициализация при загрузке страницы  
 	updateActiveMenu();  
-}); 
+});
