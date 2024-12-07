@@ -304,7 +304,8 @@ html{
 	font-size: 22px;
 	font-weight: 600;
 	position: relative;
-	touch-action: manipulation;       
+	touch-action: manipulation;   
+	display: inline-block;    
 }
 
 .app__btn a:active{
