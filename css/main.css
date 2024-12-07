@@ -41,7 +41,7 @@ html{
 	height: 80px;
 	background-color: white;
 	z-index: 100;
-	box-shadow: 0px 6px 11px 0px rgba(0,0,0,0.49);
+	box-shadow: 0px 6px 11px 0px rgba(0,0,0,0.15);
 }
 
 .header-row {
@@ -102,11 +102,7 @@ html{
 	align-content: center;
 }
 
-.header__menu-item > a:hover{
-	background: linear-gradient(90deg, rgba(48,194,183,1) 0%, rgba(112,225,166,1) 50%, rgba(150,239,193,1) 100%);
-	transition-duration: 0.2s;
-	color: white;
-}
+
 
 .header__menunav-item > a{
 	font-size: 23.5px;
@@ -122,11 +118,6 @@ html{
 	align-content: center;
 }
 
-.header__menunav-item > a:hover{
-	background: linear-gradient(90deg, rgba(48,194,183,1) 0%, rgba(112,225,166,1) 50%, rgba(150,239,193,1) 100%);
-	transition-duration: 0.2s;
-	color: white;
-}
 
 .active__menu{
 	background: linear-gradient(90deg, rgba(48,194,183,1) 0%, rgba(112,225,166,1) 50%, rgba(150,239,193,1) 100%);
@@ -305,6 +296,7 @@ html{
 	width: 415px;
 	opacity: 0;
 	transition: all 0.8s ease 0.6s;
+	border-radius: 40px;
 }
 
 .app__btn a{
