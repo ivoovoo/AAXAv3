@@ -308,7 +308,8 @@ html{
 }
 
 .app__btn a:active{
-	background-color: transparent;
+	background-color: white;
+	color: black;
 	border: none;
 }
 
