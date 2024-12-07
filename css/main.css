@@ -306,6 +306,11 @@ html{
 	position: relative;
 	background-color: transparent;
 	border: none;
+
+	-webkit-user-select: none; 
+   -moz-user-select: none;    
+   -ms-user-select: none;     
+   user-select: none;         
 }
 
 .app__btn a:hover{
