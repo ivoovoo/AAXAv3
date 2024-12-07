@@ -194,9 +194,11 @@ body{
 }
 
 .web__img{
-	margin-right: -200px;
-	margin-top: 30px;
-
+	margin-left: 0;
+	margin-top: 60px;
+	display: block;
+	width: 630px;
+	height: 100%;
 	opacity: 0;
 	transition: all 0.8s ease 0.25s;
 }
@@ -211,7 +213,7 @@ body{
 
 @media(max-width:1300px){
 	.web__img{
-		margin-right: -100px;
+		margin-right: 0;
 		width: 600px;
 	}
 }
@@ -242,7 +244,7 @@ body{
 }
 
 @media(max-width:500px){
-	
+
 }
 
 

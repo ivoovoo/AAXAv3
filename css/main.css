@@ -8,6 +8,7 @@
 body{
 	font-family: "Poppins", serif;
 	scroll-behavior: smooth;
+	background-color: white;
 }
 
 html{
@@ -207,6 +208,14 @@ html{
 	transition: all 0.8s ease 0.3s;
 }
 
+
+
+
+
+
+
+
+
 .app__uptitle::after{
 	position: absolute;
 	content: url('../img/element__after2.svg');
@@ -292,15 +301,17 @@ html{
 }
 
 .app__img {
-	display: inline-block;
-	width: 415px;
+	display: -block;
+	width: 350px;
+	height: 100%;
 	opacity: 0;
 	transition: all 0.8s ease 0.6s;
 	border-radius: 40px;
+	margin-top: 40px;
 }
 
 .app__btn a{
-	color: black;
+	color: white;
 	font-size: 22px;
 	font-weight: 600;
 	position: relative;
@@ -310,7 +321,6 @@ html{
 
 .app__btn a:focus{
 	background-color: transparent;
-	color: black;
 	border: none;
 }
 
@@ -331,7 +341,7 @@ html{
 .app__btn-bottom{
 	margin: 0 auto;
 	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 
 
