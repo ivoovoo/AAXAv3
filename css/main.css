@@ -305,7 +305,15 @@ html{
 	font-weight: 600;
 	position: relative;
 	background-color: transparent;
+	border: none;
 }
+
+.app__btn a:hover{
+	background-color: transparent;
+	border: none;
+}
+
+
 
 .app__btn a::after{
 	position: absolute;
