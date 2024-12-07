@@ -304,6 +304,7 @@ html{
 	font-size: 22px;
 	font-weight: 600;
 	position: relative;
+	background-color: transparent;
 }
 
 .app__btn a::after{
