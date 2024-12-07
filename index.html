@@ -11,35 +11,34 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<header class="header ">
+	<header id="header" class="header ">
 		<div class="container">
 			<div class="header-row">
 				<div class="header__logo anim-items ">
-					<img src="./img/logo__svg.svg" alt="" class="header__img">
+					<img loading="lazy" src="./img/logo__svg.svg" alt="" class="header__img" >
 					<p class="header__logo-name">AAXA</p>
 				</div>
 				<div class="header__menu">
 					<ul class="header__menu-list anim-items">
-						<li class="header__menu-item"><a href="index.html">FUTURES</a></li>
-						<li class="header__menu-item"><a href="web3.html">WEB3</a></li>
-						<li class="header__menu-item"><a href="ton.html">TON</a></li>
-						<li class="header__menu-item"><a href="open.html">OPEN</a></li>
+						<li class="header__menu-item"><a href="#app">FUTURES</a></li>
+						<li class="header__menu-item"><a href="#web">WEB3</a></li>
+						<li class="header__menu-item"><a href="#ton">TON</a></li>
+						<li class="header__menu-item"><a href="#open">OPEN</a></li>
 					</ul>
 				</div>
-				<div class="menu__img"> 
-					<img src="./img/menu.svg" alt="" class="menu__img" >
-				</div>
 			</div>
-			<div class="menu">
-				<a href="index.html" class="active__menu-item">FUTURES</a>
-				<a href="web3.html" class="active__menu-item">WEB3</a>
-				<a href="ton.html" class="active__menu-item">TON</a>
-				<a href="open.html" class="active__menu-item">OPEN</a>
-			</div>
-		</div>
+		</div>			
 	</header>
+				<div class="menu__nav"> 
+					<ul class="header__menu-nav-list anim-items">
+						<li class="header__menunav-item"><a href="#app">FUTURES</a></li>
+						<li class="header__menunav-item"><a href="#web">WEB3</a></li>
+						<li class="header__menunav-item"><a href="#ton">TON</a></li>
+						<li class="header__menunav-item"><a href="#open">OPEN</a></li>
+					</ul>
+				</div>
 	<main class="main">
-		<section class="app">
+		<section id="app" class="app">
 			<div class="container">
 				<div class="app__content">
 					<div class="app-column">
@@ -51,12 +50,11 @@
 							<a href="https://t.me/AAXAIBOT">@AAXAIBOT</a>
 						</div>
 					</div>
-					<img src="./img/phone__futures.svg" alt="" class="app__img anim-items">
+					<img loading="lazy" src="./img/phone__futures.svg" alt="" class="app__img anim-items">
 				</div>
 			</div>
 		</section>
-		<link rel="stylesheet" href="web3.html">
-		<section class="web">
+		<section id="web" class="web">
 			<div class="container">
 				<div class="web__content">
 					<div class="web__text-column">
@@ -65,11 +63,11 @@
 						<p class="web__subtitle anim-items">TON Blockchain Technology : High-level security and transaction transparency </p>
 						<p class="web__text anim-items">Real-Time Notifications 📲: Full control over all transactions as they happen</p>
 					</div>
-					<img src="./img/laptop.svg" alt="" class="web__img anim-items">
+					<img loading="lazy" src="./img/laptop.svg" alt="" class="web__img anim-items">
 				</div>
 			</div>
 		</section>
-		<section class="ton">
+		<section id="ton" class="ton">
 			<div class="container-right">
 				<div class="ton__content">
 					<div class="ton__row">
@@ -80,7 +78,7 @@
 							<p class="ton__text-third anim-items"> <span class="ton__text-third-medium">TON’s </span>smart contract technology</p>
 							<p class="ton__text-fourty anim-items"> <span class="ton__text-fourty-medium">Eco-Friendly Mining </span>– Sustainable technology</p>
 						</div>
-						<img src="./img/phone.svg" alt="" class="ton__img anim-items">
+						<img loading="lazy" src="./img/phone.svg" alt="" class="ton__img anim-items">
 					
 					<div class="ton__text-column">
 						<p class="ton__text-second second anim-items"> <span class="ton__text-second-medium">Decentralized Network</span> – Fully distributed system</p>
@@ -100,7 +98,7 @@
 					<h1 class="crypto__title anim-items">BTC <span class="crypto__title-regular">ETH</span> TON <span class="crypto__title-regular">SOL</span> XRP <span class="crypto__title-regular">BNB</span> TRON</h1>
 					<div class="crypto__row">
 						<div class="crypto__img anim-items">
-							<img src="./img/crypto__laptop.svg" alt="" class="crypto__imgg">
+							<img loading="lazy" src="./img/crypto__laptop.svg" alt="" class="crypto__imgg">
 						</div>
 						<div class="crypto__column">
 							<p class="crypto__upertitle anim-items"> <span class="crypto__upertitle-medium">SMART</span> AND ADAPTIVE INTERFACE ✨</p>
@@ -115,7 +113,14 @@
 				</div>
 			</div>
 		</section>
-		<section class="tgbot">
+		<section id="open" class="phones">
+			<div class="phones__row-2">
+				<img loading="lazy" src="./img/open__phone1.svg" alt="" class="phone1 anim-items">
+				<img loading="lazy" src="./img/open__phone2.svg" alt="" class="phone2 anim-items">
+				<img loading="lazy" src="./img/open__phone3.svg" alt="" class="phone3 anim-items">
+			</div>
+		</section>
+		<section  class="tgbot">
 			<div class="container">
 				<div class="tgbot__title-row">
 					<h2 class="tgbot__title anim-items">Telegram BOT</h2>
@@ -132,15 +137,47 @@
 							<li class="text__item-4 anim-items"> • Share and Expand 🧭 Spread the wordwith referral links and <span class="text__item-4-regular">grow</span> theplatform’s success</li>
 						</ul>
 					</div>
-					<img src="./img/tgbot__laptop.svg" alt="" class="tgbot__img anim-items">
+					<img loading="lazy" src="./img/tgbot__laptop.svg" alt="" class="tgbot__img anim-items">
+				</div>
+			</div>
+		</section>
+		<section class="ecosystem">
+			<div class="container">
+				<div class="ecosystem__column">
+					<div class="ecosystem__punkts">
+						<ul class="ecosystem__punkts-list anim-items">
+							<li class="ecosystem__punkts-item">1️⃣ <span class="ecosystem__punkts-item-green">Hashrate</span> – The speed of computations by mining equipment</li>
+							<li class="ecosystem__punkts-item ecosystem__punkts-item-medium">2️⃣ Block Reward – The reward for successfully adding a block to the blockchain</li>
+							<li class="ecosystem__punkts-item">3️⃣ <span class="ecosystem__punkts-item-green">Mining</span> <span class="ecosystem__punkts-item-medium">Pool</span> – A group of miners working together to share rewards</li>
+							<li class="ecosystem__punkts-item ecosystem__punkts-item-medium">4️⃣ ASIC Miner – Specialized hardware designed for mining</li>
+							<li class="ecosystem__punkts-item">5️⃣ <span class="ecosystem__punkts-item-green">Difficulty</span> – The complexity of solving tasks to mine a new block</li>
+						</ul>
+					</div>
+					<div class="ecosystem__row">
+						<div class="ecosystem__column">
+							<h2 class="ecosystem__column-title anim-items">Ecosystem</h2>
+							<div class="ecosystem__row-item1 anim-items">
+								<p class="ecosystem__row-item1-title">Cloud Mining  ⚡</p>
+								<p class="ecosystem__row-item1-subtitle">1️⃣ Choose a miner, connect your wallet, and start earning instantly without owning hardware! </p>
+							</div>
+						</div>
+						<div class="ecosystem__row-item2 "><img src="./img/Ecosystem__phine.svg" alt="" class="ecosystem__phone anim-items"></div>
+						<div class="ecosystem__column ecosystem__column-end">
+							<h2 class="ecosystem__column-title anim-items">Integration</h2>
+							<div class="ecosystem__row-item1 anim-items">
+								<p class="ecosystem__row-item1-title"> Next  Mining ⛏</p>
+								<p class="ecosystem__row-item1-subtitle">2️⃣ Hassle - Mining Rent power, track earnings in real-time, and get payouts directly to your wallet! ⚡</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
 		<section class="phones">
 			<div class="phones__row-2">
-				<img src="./img/open__phone4.svg" alt="" class="phone1 anim-items">
-				<img src="./img/open__phone5.svg" alt="" class="phone2 anim-items">
-				<img src="./img/open__phone6.svg" alt="" class="phone3 anim-items">
+				<img loading="lazy" src="./img/open__phone4.svg" alt="" class="phone1 anim-items">
+				<img loading="lazy" src="./img/open__phone5.svg" alt="" class="phone2 anim-items">
+				<img loading="lazy" src="./img/open__phone6.svg" alt="" class="phone3 anim-items">
 			</div>
 		</section>
 	</main>
