@@ -30,45 +30,24 @@ if (animItems.length > 0) {
 	animOnScroll()
 }
 
-// document.addEventListener("DOMContentLoaded", function() {  
-// 	const menuItems = document.querySelectorAll('.menu__nav a');  
-// 	if (menuItems.length > 0) {  
-// 		 menuItems[0].classList.add('active__menu'); // Добавляем класс для выделения  
-// 	}  
-// });  
-
-// document.addEventListener("DOMContentLoaded", function() {  
-// 	const menuItems = document.querySelectorAll('.menu_nav a'); // Убедитесь, что селектор правильный  
-// 	const sections = document.querySelectorAll('section'); // Селектор для секций  
-
-// 	// Функция для обновления активного пункта меню  
-// 	function updateActiveMenu() {  
-// 		 let scrollPos = window.scrollY + window.innerHeight / 2; // Корректная позиция прокрутки  
-
-// 		 sections.forEach((section, index) => {  
-// 			  const sectionTop = section.offsetTop;  
-// 			  const sectionHeight = section.offsetHeight;  
-
-// 			  // Проверка, если секция находится в пределах видимости  
-// 			  if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {  
-// 					menuItems.forEach(item => item.classList.remove('active_menu')); // Сброс активного класса  
-// 					menuItems[index].classList.add('active_menu'); // Добавляем активный класс к текущему элементу  
-// 			  }  
-// 		 });  
-// 	}  
-
-// 	// Слушатель прокрутки  
-// 	window.addEventListener('scroll', updateActiveMenu);  
-
-// 	// Инициализация при загрузке страницы  
-// 	updateActiveMenu();  
-// });  
+document.addEventListener("DOMContentLoaded", function() {  
+	const menuItems = document.querySelectorAll('.menu__nav a');  
+	if (menuItems.length > 0) {  
+		 menuItems[0].classList.add('active__menu'); // Добавляем класс для выделения  
+	}  
+});  
 
 document.addEventListener("DOMContentLoaded", function() {  
 	const menuItems = document.querySelectorAll('.menu_nav a'); // Селектор для меню  
 	const sections = document.querySelectorAll('section'); // Селектор для секций  
 
-	// Форма для обновления активного пункта меню  
+	// Проверка существования элементов  
+	if (menuItems.length === 0 || sections.length === 0) {  
+		 console.error('Menu items or sections not found');  
+		 return; // Выход, если элементы не найдены  
+	}  
+
+	// Функция для обновления активного пункта меню  
 	function updateActiveMenu() {  
 		 let scrollPos = window.scrollY + window.innerHeight / 2; // Позиция прокрутки  
 
@@ -85,9 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	}  
 
 	// Инициализация при загрузке страницы: активируем первый пункт меню  
-	if (menuItems.length > 0) {  
-		 menuItems[0].classList.add('active_menu'); // Устанавливаем активный класс на первый элемент  
-	}  
+	menuItems[0].classList.add('active_menu'); // Устанавливаем активный класс на первый элемент  
 
 	// Слушатель прокрутки  
 	window.addEventListener('scroll', updateActiveMenu);  
