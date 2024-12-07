@@ -300,20 +300,14 @@ html{
 }
 
 .app__btn a{
-	color: black;
+	color: white;
 	font-size: 22px;
 	font-weight: 600;
 	position: relative;
-	background-color: transparent;
-	border: none;
-
-	-webkit-user-select: none; 
-   -moz-user-select: none;    
-   -ms-user-select: none;     
-   user-select: none;         
+	touch-action: manipulation;       
 }
 
-.app__btn a:hover{
+.app__btn a:active{
 	background-color: transparent;
 	border: none;
 }
@@ -325,6 +319,12 @@ html{
 	content: url('../img/btn__after.svg');
 	left: 145px;
 	top: 2px;
+}
+
+.app__btn-bottom{
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 
