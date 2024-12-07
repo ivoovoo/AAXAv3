@@ -30,45 +30,66 @@ if (animItems.length > 0) {
 	animOnScroll()
 }
 
-document.addEventListener("DOMContentLoaded", function() {  
-	const menuItems = document.querySelectorAll('.menu__nav a');  
-	if (menuItems.length > 0) {  
-		 menuItems[0].classList.add('active__menu'); // Добавляем класс для выделения  
-	}  
-});  
+// document.addEventListener("DOMContentLoaded", function() {  
+// 	const menuItems = document.querySelectorAll('.menu__nav a');  
+// 	if (menuItems.length > 0) {  
+// 		 menuItems[0].classList.add('active__menu'); // Добавляем класс для выделения  
+// 	}  
+// });  
 
-document.addEventListener("DOMContentLoaded", function() {  
-	const menuItems = document.querySelectorAll('.menu_nav a'); // Селектор для меню  
-	const sections = document.querySelectorAll('section'); // Селектор для секций  
+// document.addEventListener("DOMContentLoaded", function() {  
+// 	const menuItems = document.querySelectorAll('.menu_nav a'); // Селектор для меню  
+// 	const sections = document.querySelectorAll('section'); // Селектор для секций  
 
-	// Проверка существования элементов  
-	if (menuItems.length === 0 || sections.length === 0) {  
-		 console.error('Menu items or sections not found');  
-		 return; // Выход, если элементы не найдены  
-	}  
+// 	// Проверка существования элементов  
+// 	if (menuItems.length === 0 || sections.length === 0) {  
+// 		 console.error('Menu items or sections not found');  
+// 		 return; // Выход, если элементы не найдены  
+// 	}  
 
-	// Функция для обновления активного пункта меню  
-	function updateActiveMenu() {  
-		 let scrollPos = window.scrollY + window.innerHeight / 2; // Позиция прокрутки  
+// 	// Функция для обновления активного пункта меню  
+// 	function updateActiveMenu() {  
+// 		 let scrollPos = window.scrollY + window.innerHeight / 2; // Позиция прокрутки  
 
-		 sections.forEach((section, index) => {  
-			  const sectionTop = section.offsetTop;  
-			  const sectionHeight = section.offsetHeight;  
+// 		 sections.forEach((section, index) => {  
+// 			  const sectionTop = section.offsetTop;  
+// 			  const sectionHeight = section.offsetHeight;  
 
-			  // Проверка, если секция находится в пределах видимости  
-			  if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {  
-					menuItems.forEach(item => item.classList.remove('active_menu')); // Сброс всех активных классов  
-					menuItems[index].classList.add('active_menu'); // Добавляем активный класс к текущему элементу  
-			  }  
-		 });  
-	}  
+// 			  // Проверка, если секция находится в пределах видимости  
+// 			  if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {  
+// 					menuItems.forEach(item => item.classList.remove('active_menu')); // Сброс всех активных классов  
+// 					menuItems[index].classList.add('active_menu'); // Добавляем активный класс к текущему элементу  
+// 			  }  
+// 		 });  
+// 	}  
 
-	// Инициализация при загрузке страницы: активируем первый пункт меню  
-	menuItems[0].classList.add('active_menu'); // Устанавливаем активный класс на первый элемент  
+// 	// Инициализация при загрузке страницы: активируем первый пункт меню  
+// 	menuItems[0].classList.add('active_menu'); // Устанавливаем активный класс на первый элемент  
 
-	// Слушатель прокрутки  
-	window.addEventListener('scroll', updateActiveMenu);  
+// 	// Слушатель прокрутки  
+// 	window.addEventListener('scroll', updateActiveMenu);  
 
-	// Инициализация при загрузке страницы  
-	updateActiveMenu();  
-});  
+// 	// Инициализация при загрузке страницы  
+// 	updateActiveMenu();  
+// });  
+
+document.addEventListener("DOMContentLoaded", function () {  
+	const tabs = document.querySelectorAll('.menu__nav a');  
+	const sections = document.querySelectorAll('section');  
+ 
+	// Устанавливаем первую вкладку активной при загрузке страницы  
+	tabs[0].classList.add('active__menu');  
+ 
+	window.addEventListener('scroll', function () {  
+	  let scrollPosition = window.scrollY;  
+ 
+	  sections.forEach((section, index) => {  
+		 if (scrollPosition >= section.offsetTop) {  
+			// Убираем активный класс у всех вкладок  
+			tabs.forEach(tab => tab.classList.remove('active__menu'));  
+			// Устанавливаем активный класс для активной вкладки  
+			tabs[index].classList.add('active__menu');  
+		 }  
+	  });  
+	});  
+ });  
