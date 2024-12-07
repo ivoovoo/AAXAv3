@@ -30,6 +30,36 @@ if (animItems.length > 0) {
 	animOnScroll()
 }
 
-document.querySelector('.menu__img').addEventListener('click',function(){
-	document.querySelector('.menu').classList.toggle('open');
-})
+document.addEventListener("DOMContentLoaded", function() {  
+	const menuItems = document.querySelectorAll('.menu__nav a');  
+	if (menuItems.length > 0) {  
+		 menuItems[0].classList.add('active__menu'); // Добавляем класс для выделения  
+	}  
+});  
+
+document.addEventListener("DOMContentLoaded", function() {  
+	const menuItems = document.querySelectorAll('.menu__nav a');  
+	const sections = document.querySelectorAll('section');  
+
+	// Функция для обновления активного пункта меню  
+	function updateActiveMenu() {  
+		 let scrollPos = window.scrollY + window.innerHeight / 2; // Позиция прокрутки  
+
+		 sections.forEach((section, index) => {  
+			  const sectionTop = section.offsetTop;  
+			  const sectionHeight = section.offsetHeight;  
+
+			  // Проверка, если секция находится в пределах видимости  
+			  if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {  
+					menuItems.forEach(item => item.classList.remove('active__menu')); // Сброс активного класса  
+					menuItems[index].classList.add('active__menu'); // Добавляем активный класс к текущему элементу  
+			  }  
+		 });  
+	}  
+
+	// Слушатель прокрутки  
+	window.addEventListener('scroll', updateActiveMenu);  
+
+	// Инициализация при загрузке страницы  
+	updateActiveMenu();  
+}); 
