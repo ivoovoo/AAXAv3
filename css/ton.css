@@ -90,11 +90,6 @@ body{
 	align-content: center;
 }
 
-.header__menu-item > a:hover{
-	background: linear-gradient(90deg, rgba(48,194,183,1) 0%, rgba(112,225,166,1) 50%, rgba(150,239,193,1) 100%);
-	transition-duration: 0.2s;
-	color: white;
-}
 
 .menu {
 	width: 100%;
@@ -259,7 +254,7 @@ body{
 }
 
 .ton__img{
-	width: clamp(150px,16.4vw,315px);
+	width: clamp(180px,16.4vw,315px);
 	display: block;
 	opacity: 0;
 	transition: all 0.8s ease 0.18s;

@@ -282,6 +282,10 @@ padding-top: 70px;
 
 .tgbot__img {
 	margin-right: -70px;
+	display: block;
+	width: 630px;
+	height: 100%;
+	
 }
 
 .text__item-3{
