@@ -93,3 +93,26 @@ document.addEventListener("DOMContentLoaded", function () {
 	  });  
 	});  
  });  
+
+ document.addEventListener("DOMContentLoaded", function () {  
+	const tabs = document.querySelectorAll('.header__menu-item a');  
+	const sections = document.querySelectorAll('section');  
+ 
+	// Устанавливаем первую вкладку активной при загрузке страницы  
+	tabs[0].classList.add('active__menu');  
+ 
+	window.addEventListener('scroll', function () {  
+	  let scrollPosition = window.scrollY;  
+ 
+	  sections.forEach((section, index) => {  
+		 if (scrollPosition >= section.offsetTop) {  
+			// Убираем активный класс у всех вкладок  
+			tabs.forEach(tab => tab.classList.remove('active__menu'));  
+			// Устанавливаем активный класс для активной вкладки  
+			tabs[index].classList.add('active__menu');  
+		 }  
+	  });  
+	});  
+ });  
+
+ 
