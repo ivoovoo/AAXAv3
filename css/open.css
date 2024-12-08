@@ -125,7 +125,7 @@ body{
 
 .phones {
 	padding-top: 50px;
-	padding-bottom: 0px;
+	padding-bottom: 40px;
 	margin-bottom: 20px;
 }
 
@@ -366,7 +366,7 @@ padding-top: 70px;
 	}
 
 	.phones{
-		padding-bottom: 70px;
+		padding-bottom: 115px;
 	}
 
 	.tgbot__img {
