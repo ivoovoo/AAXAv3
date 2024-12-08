@@ -210,7 +210,7 @@ html{
 
 	transform: translate(0px , 120%);
 	opacity: 0;
-	transition: all 0.8s ease 0.3s;
+	transition: all 0.8s ease 0.45s;
 }
 
 
@@ -246,7 +246,7 @@ html{
 
 	transform: translate(0px , 120%);
 	opacity: 0;
-	transition: all 0.8s ease 0.4s;
+	transition: all 0.8s ease 0.5s;
 }
 
 .app__title-green{
@@ -320,7 +320,7 @@ html{
 
 .app__img {
 	display: -block;
-	width: 315px;
+	width: 275px;
 	height: 100%;
 	object-fit: cover;
 	opacity: 0;
