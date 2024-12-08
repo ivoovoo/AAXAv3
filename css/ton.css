@@ -334,9 +334,14 @@ padding-top: 100px;
 .crypto__img {
 	width: 890px;
 	object-fit: contain;
+	z-index: 50;
 
 	opacity: 0;
 	transition: all 0.8s ease 0.4s;
+}
+
+.crypto__img{
+	z-index: 50;
 }
 
 .crypto__column {
@@ -375,6 +380,7 @@ padding-top: 100px;
 	position: absolute;
 	top: 10px;
 	left: -80px;
+	z-index: -1;
 }
 
 .crypto__title-2-medium{
@@ -412,6 +418,7 @@ padding-top: 100px;
 	content: url('../img/crypto__text-after.svg');
 	top: 100px;
 	left: 320px;
+	z-index: -1;
 }
 
 .btn {

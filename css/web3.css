@@ -186,6 +186,7 @@ body{
 	position: absolute;
 	content: url('../img/web__after.svg');
 	top: clamp(70px,7.29vw,140px);
+	z-index: -1;
 }
 
 .web__img{
@@ -196,6 +197,7 @@ body{
 	height: 100%;
 	opacity: 0;
 	transition: all 0.8s ease 0.25s;
+	z-index: 50;
 }
 
 .active{
