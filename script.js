@@ -93,26 +93,43 @@ document.addEventListener("DOMContentLoaded", function () {
 	  });  
 	});  
  });  
-
- document.addEventListener("DOMContentLoaded", function () {  
+document.addEventListener("DOMContentLoaded", function () {  
 	const tabs = document.querySelectorAll('.header__menu-item a');  
 	const sections = document.querySelectorAll('section');  
- 
+
+	// Проверяем наличие вкладок и секций  
+	if (tabs.length === 0) {  
+		 console.error("Нет доступных вкладок.");  
+		 return;  
+	}  
+	if (sections.length === 0) {  
+		 console.error("Нет доступных секций.");  
+		 return;  
+	}  
+
 	// Устанавливаем первую вкладку активной при загрузке страницы  
 	tabs[0].classList.add('active__menu');  
- 
-	window.addEventListener('scroll', function () {  
-	  let scrollPosition = window.scrollY;  
- 
-	  sections.forEach((section, index) => {  
-		 if (scrollPosition >= section.offsetTop) {  
-			// Убираем активный класс у всех вкладок  
-			tabs.forEach(tab => tab.classList.remove('active__menu'));  
-			// Устанавливаем активный класс для активной вкладки  
-			tabs[index].classList.add('active__menu');  
-		 }  
-	  });  
-	});  
- });  
 
- 
+	// Обработчик события прокрутки  
+	window.addEventListener('scroll', function () {  
+		 let scrollPosition = window.scrollY + 1; // добавляем 1 для улучшения точности  
+
+		 sections.forEach((section, index) => {  
+			  const sectionTop = section.offsetTop;  
+			  const sectionHeight = section.offsetHeight;  
+
+			  // Проверяем, находится ли текущая позиция скролла в пределах текущей секции  
+			  if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {  
+					// Убираем активный класс у всех вкладок  
+					tabs.forEach(tab => tab.classList.remove('active__menu'));  
+					
+					// Устанавливаем активный класс для текущей вкладки  
+					if (index < tabs.length) { // проверка индекса  
+						 tabs[index].classList.add('active__menu');  
+					} else {  
+						 console.error(`Индекс ${index} превышает количество вкладок (${tabs.length}).`);  
+					}  
+			  }  
+		 });  
+	});  
+});
