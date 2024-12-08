@@ -131,6 +131,7 @@ body{
 .web__content {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .web__text-column {
@@ -231,7 +232,7 @@ body{
 	}
 
 	.web__img{
-		display: none;
+		width: 320px;
 	}
 
 }

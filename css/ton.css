@@ -329,6 +329,7 @@ padding-top: 100px;
 .crypto__row {
 	display: flex;
 	margin-top: 75px;
+	flex-wrap: wrap;
 }
 
 .crypto__img {
@@ -523,7 +524,7 @@ padding-top: 100px;
 	}
 
 	.crypto__img {
-		display: none;
+		width: 340px;
 	}
 
 	.crypto__column{
