@@ -191,7 +191,7 @@ body{
 }
 
 .web__img{
-	margin-left: 0;
+	margin-left: clamp(30px,3.12vw,60px);
 	margin-top: 60px;
 	display: block;
 	width: 630px;
@@ -199,6 +199,7 @@ body{
 	opacity: 0;
 	transition: all 0.8s ease 0.25s;
 	z-index: 50;
+	
 }
 
 .active{
